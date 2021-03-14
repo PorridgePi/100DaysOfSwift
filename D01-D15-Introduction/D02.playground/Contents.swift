@@ -1,6 +1,8 @@
 import UIKit
 
-/* Day 2 */
+/*
+ Day 2 - arrays, dictionaries, sets, and enums
+ */
 
 // 1. Arrays
 let ltt = "Linus Tech Tips"
