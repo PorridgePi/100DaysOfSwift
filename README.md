@@ -11,3 +11,5 @@ Began in March 2021
 ### Days 1-12: Introduction to Swift
 
 * Day 1: variables, simple data types, string interpolation
+* Day 2: complex data types: arrays, sets, tuples, dictionaries, as well as enums
+
