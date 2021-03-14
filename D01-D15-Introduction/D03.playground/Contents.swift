@@ -88,3 +88,104 @@ if age1 > 18 && age2 > 18 {
 if age1 > 18 || age2 > 18 {
     print("At least one is over 18") // will run if at least one condition met
 }
+
+
+// 7. The ternary operator
+// A rarely used operator
+// Works with 3 values at once, which is where its name comes from
+// Checks a condition specified in the 1st value; if it's true, return 2nd value; else if it's false, return the 3rd value
+
+let card3 = 11
+let card4 = 10
+print(card1 == card2 ? "Cards are the same" : "Cards are different")
+
+// It is basically this:
+if card1 == card2 {
+    print("Cards are the same")
+} else {
+    print("Cards are different")
+}
+
+
+// 8. Switch statements
+// If you have several conditions using if and else if, it's often clearer to use a different construct known as switch case
+// Write condition once, list all possible outcomes and what should happen for each outcome
+
+var weather = "sunny"
+
+switch weather {
+case "rain":
+    print("Bring an umbrella")
+case "windy":
+    print("Wear a jacket")
+case "sunny":
+    print("Wear sunscreen")
+default: // default is required because Swift requires all possible cases to be covered
+    print("Enjoy your day!")
+}
+
+// Swift will only run the code inside each case, so if you want execution to continue onto the next case, use the fallthrough keyword
+weather = "windy"
+switch weather {
+case "rain":
+    print("Bring an umbrella")
+case "windy":
+    print("Wear a jacket")
+    fallthrough // result in "Wear a jacket" and "Wear sunscreen"
+case "sunny":
+    print("Wear sunscreen")
+default:
+    print("Enjoy your day!")
+}
+
+
+// 9. Range operators
+// Two ways of making ranges: ..< (half-open range operator, ranges up to but excluding final value) and ... (closed range operator, ranges up to and including the final value)
+// Ranges are helpful with switch blocks
+
+let score5 = 85
+
+switch score5 {
+case 0..<50:
+    print("You failed!")
+case 50..<80:
+    print("You did alright.")
+case 80...100:
+    print("You got 4.0!")
+default:
+    print("How on earth did you get above 100?")
+}
+
+// Acutally, there is another type of range operator - one-sided ranges
+// E.g. (with X be an integer) X... or ...X or ..<X
+
+var numTest = 10
+switch numTest {
+case ...20:
+    print("Less than or equals to 20")
+default:
+    print("Hi!")
+}
+
+numTest = 40
+switch numTest {
+case ..<40:
+    print("Less than 40")
+default:
+    print("Hi!")
+}
+
+// 10. Operators and conditions summary
+
+/*
+ 1. Arithmetic operators (+, -, *, /, %)
+ 2. Operator overloading, where what an operator does depends on the values given
+ 3. Compound variants of operators that modify their variables in place (+=, -=, etc.)
+ 4. Comparison operators (==, !=, <, <=, >, >=)
+ 5. Conditions (if, else, else if)
+ 6. Combining conditions (||, &&)
+ 7. Ternary operator that combines a check with true or false codes, but it is not recommended by author of course
+ 8. Use switch, if you have multiple conditions using the same value, as it is often clearer to do so
+ 9. Create ranges with ... and ..<, depending on whether the last number should be included or exluded
+    One-sided ranges with ...X or X... or ..<X
+ */
