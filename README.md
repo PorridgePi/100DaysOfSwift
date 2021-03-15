@@ -13,3 +13,4 @@ Began in March 2021
 * Day 1: variables, simple data types, string interpolation
 * Day 2: complex data types: arrays, sets, tuples, dictionaries, as well as enums
 * Day 3: operators and conditions: arithmetic, compound and comparision operators, conditions and combining conditions, operators, switch, ranges
+* Day 4: loops: for, while and repeat loops, break and break for nested loops, continue, infinite loops
