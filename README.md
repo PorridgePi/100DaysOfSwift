@@ -14,3 +14,4 @@ Began in March 2021
 * Day 2: complex data types: arrays, sets, tuples, dictionaries, as well as enums
 * Day 3: operators and conditions: arithmetic, compound and comparision operators, conditions and combining conditions, operators, switch, ranges
 * Day 4: loops: for, while and repeat loops, break and break for nested loops, continue, infinite loops
+* Day 5: functions: write functions, parameters, return values, parameter labels, omit parameter labels, defalt parameters, variadic functions, write and run throwing functions, and inout parameters
