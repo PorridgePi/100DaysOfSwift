@@ -77,3 +77,61 @@ func square2(numbers: Int...) {
 }
 
 square2(numbers: 1, 2, 3, 4)
+
+
+// 7. Writing throwing functions
+// Define an enum that is based on the Error type
+
+enum PasswordError: Error {
+    case obvious
+}
+
+func checkPassword(_ password: String) throws -> Bool {
+    if password == "password" {
+        throw PasswordError.obvious
+    }
+    
+    return true
+}
+
+// checkPassword("password") will throw an error
+
+
+// 8. Running throwing functions
+// do starts a section of code that might cause problems; try is used before every function that might throw an error; catch allows you to handle errors gracefully
+
+do {
+    let pw = "password"
+    try checkPassword(pw)
+    print("Acceptable password!") // will never be reached as an error is thrown
+} catch {
+    print("You should not use that password!")
+}
+
+
+// 9. inout parameters
+// All parameters passed into functions are constants, so it cannot be changed
+// Pass variables as inout allows them to be changed inside the function, and the changes will be reflected in the original variables outside the functions
+
+func doubleThePrice(number: inout Int) {
+    number *= 2
+}
+
+// To use that, a variable must be made, and an ampersand (&) must be added before the variable's name when it is passed into the function
+
+var num = 6
+doubleThePrice(number: &num)
+
+
+// 10. Functions summary
+/*
+ 1. Write functions with func, and functions let us re-use code without repeating themselves
+ 2. Accepting parameters with func Name(parameterName: Type) {
+ 3. Returning values with return, and stating the type of the value returned at the end (like this: func Name(parameterName: Type) -> returnedType { )
+ 4. Parameter lables which allow different labels for the variable when used internally or passed into the function externally (used like this: func Name(externalName internalName: Type) { )
+ 5. Default parameters with the value added behind the type (like this: func Name(parameterName: Type = defaultValue) { )
+ 6. Variadic values which allows multiple values to be passed into a function (used by adding ... after the type, like this: func Name(parameterName: Type...) { )
+ 7. Writing throwing functions by first creating a enum (of Error type) with the errors as the cases, then adding "throws -> Bool" saying that it will return true or false, and finally throw an error by: throw EnumName.caseName
+ 8. Using throwing functions, by using do (which include the problematic code), try (before the function), and catch (where the error is handled gracefully)
+ 9. inout parameters, which allows parameters passed in to beb changed (use like this: add inout before the type, and a variable must be passed in, with a & before the variable)
+ */
