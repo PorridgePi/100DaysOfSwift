@@ -28,7 +28,7 @@ driving1("Charles") // one difference between functions and closures is that par
 // 3. Returning values from a closure
 let drivingWithReturn = { (person: String) -> String in // return a string, so add -> String before in
     return "\(person) is driving a car." // use return just like a normal function
-}/Users/porridge/100DaysOfSwift/README.md
+}
 
 let msg = drivingWithReturn("Charles")
 print(msg)
