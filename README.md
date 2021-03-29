@@ -16,4 +16,4 @@ Began in March 2021
 * Day 4: loops: for, while and repeat loops, break and break for nested loops, continue, infinite loops
 * Day 5: functions: write functions, parameters, return values, parameter labels, omit parameter labels, defalt parameters, variadic functions, write and run throwing functions, and inout parameters
 * Day 6: closures part 1: write closures, accept parameters, return values, closures as parameters, trailing closure syntax 
-
+* Day 7: closures part 2: closures as parameters when they accept parameters, closures as parameters when they return values, shorthand parameter names, closures with multiple parameters, returning closures from functions, capturing values
