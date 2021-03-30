@@ -65,5 +65,20 @@ struct City {
 var city = City(population: 12, gdp: -23)
 print(city.calcGDPPerCapita())
 
+// 5. Mutating methods
 
+struct City2 {
+    var population: Int
+    var gdp: Double
+    func calcGDPPerCapita() -> Double {
+        return Double(gdp)/Double(population)
+    }
+    mutating func increaseGDP(percentage: Double = 1.1) {
+        gdp *= percentage
+    }
+}
 
+var city2 = City2(population: 12, gdp: 12.0)
+print(city2.calcGDPPerCapita())
+city2.increaseGDP()
+print(city2.calcGDPPerCapita())
