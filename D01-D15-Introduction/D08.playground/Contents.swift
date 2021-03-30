@@ -52,3 +52,18 @@ progress.amount = 30
 progress.amount = 80
 progress.amount = 100
 
+
+// 4. Methods
+struct City {
+    var population: Int
+    var gdp: Int
+    func calcGDPPerCapita() -> Double {
+        return Double(gdp)/Double(population)
+    }
+}
+
+var city = City(population: 12, gdp: -23)
+print(city.calcGDPPerCapita())
+
+
+
