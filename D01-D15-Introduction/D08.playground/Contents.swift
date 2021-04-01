@@ -111,7 +111,7 @@ toys.remove(at: 0) // remove an item
  2. Computed properties in structs
  3. Property observers - runs when property changes
  4. Methods - func
- 5. Properties and methods of strings
- 6. Properties and methods of arrays
+ 5. Mutating methods
+ 6. Properties and methods of strings
+ 7. Properties and methods of arrays
  */
-
