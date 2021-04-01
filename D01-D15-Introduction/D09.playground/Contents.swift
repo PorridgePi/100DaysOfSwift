@@ -30,7 +30,7 @@ struct User2 {
     }
 }
 
-var user2 = User2("twoset")
+let user2 = User2("twoset")
 
 
 // 3. Lazy properties
@@ -50,7 +50,7 @@ struct Person {
     }
 }
 
-var ed = Person(name: "Ed")
+let ed = Person(name: "Ed")
 // familyTree is created immediately
 
 // What if it is not always needed?
@@ -95,3 +95,56 @@ print(Student.classSize)
 
 var joe = Student(name: "Joe")
 print(Student.classSize)
+
+
+// 5. Access control
+// Allows you to restrict which code can use properties and methods
+// Important because you might want to stop people reading a property directly (e.g. NRIC of someone)
+
+struct Person3 {
+    private var id: String // makes id private - cannot be read outside the struct
+
+    init(id: String) {
+        self.id = id
+    }
+}
+
+let brett = Person3(id: "12345")
+
+// Now, only methods inside Person3 can read 'id'
+struct Person4 {
+    private var id: String
+
+    init(id: String) {
+        self.id = id
+    }
+
+    func identify() -> String {
+        return "My social security number is \(id)"
+    }
+}
+
+let tom = Person4(id: "246810")
+// print(tom.id) // this will fail
+print(tom.identify())
+
+
+// 6.1 Structs part one summary (from D08)
+/*
+ 1. Create structs
+ 2. Computed properties in structs
+ 3. Property observers - runs when property changes
+ 4. Methods - func
+ 5. Mutating methods
+ 6. Properties and methods of strings
+ 7. Properties and methods of arrays
+ */
+
+// 6.2 Structs part two summary
+/*
+ 1. Initializers
+ 2. Referring to current instance with self
+ 3. Lazy properties by adding 'lazy' in front
+ 4. Static properties and methods by adding 'static' in front
+ 5. Access control with private
+ */
