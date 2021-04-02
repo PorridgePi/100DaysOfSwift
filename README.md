@@ -19,3 +19,4 @@ Began in March 2021
 * Day 7: closures part 2: closures as parameters when they accept parameters, closures as parameters when they return values, shorthand parameter names, closures with multiple parameters, returning closures from functions, capturing values
 * Day 8: structs part 1: create structs, computed properties, property observers, methods, mutating methods, properties and methods of strings and arrays
 * Day 9: structs part 2: initializers, referring to current instance, lazy properties, static properties and methods, access control
+* Day 10: classes: create classes, class inheritance, overiding methods, final classes, copies of objects point to same piece of memory, deinitializers, mutability of properties
