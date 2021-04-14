@@ -1,4 +1,4 @@
-import UIKit
+// import UIKit
 
 /*
  Day 12 - optionals
@@ -95,3 +95,19 @@ func username(for id: Int) -> String? {
 
 var user = username(for: 15) // returns nil
 user = username(for: 15) ?? "Anonymous" // returns default value of "Anonymous"
+
+
+// 7. Optional chaining
+// Normal chaining - a.b.c
+// Optional chaining - a.b?.c (add a ?)
+// The question mark is optional chaining – if first returns nil then Swift won’t try to uppercase it, and will set person to nil immediately
+
+var names = ["John", "Charles", "Jack"]
+// Below, .first will be used, which will return the first name if there is one or nil if the array is empty. .uppercased() can be then called on the result to make it an uppercase string:
+var person = names.first?.uppercased()
+print(person)
+
+names = []
+person = names.first?.uppercased()
+print(person)
+
